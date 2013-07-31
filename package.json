@@ -21,7 +21,8 @@
         "node": ">= 0.8.0"
     },
     "dependencies": {
-        "commander": "1.1.1"
+        "commander": "1.1.1",
+        "cssp": "1.0.6"
     },
     "devDependencies": {
         "jshint-groups": "0.5.1",
