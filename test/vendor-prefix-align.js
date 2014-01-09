@@ -42,6 +42,15 @@ describe('options/vendor-prefix-align', function() {
         assert.equal(comb.processString(input), expected);
     });
 
+    it('Should correctly align prefixes for properties without spaces', function() {
+        var input = fs.readFileSync('./test/vendor-prefix-align/without-spaces.css', 'utf8');
+        var expected = fs.readFileSync('./test/vendor-prefix-align/without-spaces.expected.css', 'utf8');
+
+        assert.equal(comb.processString(input), expected);
+    });
+
+
+
     it('Should always correctly align prefixes', function() {
         var input = fs.readFileSync('./test/vendor-prefix-align/complex.css', 'utf8');
         var expected = fs.readFileSync('./test/vendor-prefix-align/complex.expected.css', 'utf8');
