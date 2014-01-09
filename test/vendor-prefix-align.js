@@ -49,6 +49,13 @@ describe('options/vendor-prefix-align', function() {
         assert.equal(comb.processString(input), expected);
     });
 
+    it('Should do nothing for css writen in one line', function() {
+        var input = fs.readFileSync('./test/vendor-prefix-align/oneliner.css', 'utf8');
+        var expected = fs.readFileSync('./test/vendor-prefix-align/oneliner.expected.css', 'utf8');
+
+        assert.equal(comb.processString(input), expected);
+    });
+
 
 
     it('Should always correctly align prefixes', function() {
